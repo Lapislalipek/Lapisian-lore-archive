@@ -61,6 +61,9 @@ body{
                 border-top:double 5px rgb(23, 32, 59);
                 border-bottom:double 5px rgb(23, 32, 59);
 }
+.nav a{
+    font-size:clamp(1rem, 3vw, 2rem);
+}
 .links a{
     text-decoration:none;
     font-family: "Default";
@@ -70,8 +73,14 @@ body{
 .links{
     align-items:center;
     display:flex;
+    flex-wrap:wrap;
     justify-content:space-evenly;
     font-size:25px;
+}
+@media (max-width:600px){
+    .links{
+        flex-direction:column;
+    }
 
 }
 .nav a:hover{
