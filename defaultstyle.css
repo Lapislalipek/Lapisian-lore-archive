@@ -20,12 +20,10 @@
 }
 @keyframes flash{
     0%{
-        text-shadow:0px 0px 15px rgb(19, 230, 0);
+        text-shadow:0px 0px 1px rgb(19, 230, 0);
     }
     100%{
-        color:rgb(255, 217, 0);
-        text-shadow:0px 0px 5px rgb(255, 136, 0);
-        font-family:DefaultBold;
+        text-shadow:0px 0px 15px rgb(34, 255, 0);
     }
 }
 @keyframes tocolor{ /*Make the keyframe later*/
@@ -81,14 +79,27 @@ body{
     .links{
         flex-direction:column;
     }
+    .contentlinks{
+        flex-direction:column;
+    }
 
 }
+@media (max-width:900px){
+
+    .threadbackbutton{ 
+            border-radius:0%!important;
+            padding:7px 15px 7px 15px !important;
+            top:0%!important;
+            margin-left:0px !important;
+            font-size:15px!important;
+}
+}
 .nav a:hover{
-    animation:tocolor 0.3s forwards;
+    animation:tocolor 0.8s forwards;
     float:left;
 }
 .nav a:active{
-    animation:flash 0.5s forwards;
+    animation:flash 1s forwards;
 }
 q{
     color:rgb(0, 0, 223);
@@ -122,12 +133,12 @@ q::after{
         }
 .threadbackbutton{
             float:left;
-            background-color:darkblue;
+            background-color:rgba(0, 0, 139,0.5);
             border-radius:100%;
             padding:20px 10px 20px 10px;
             position:fixed;
-            top:12%;
-            margin-left:10px;
+            top:8%;
+            margin-left:1.36%;
             font-size:20px;
             font-family:Titles;
 }
@@ -145,4 +156,45 @@ q::after{
             border-radius:30px;
             padding:15px;
             /*padding-bottom:10000px; Check for the background color */
+        }
+.contents{
+    background-color: rgb(69, 78, 110);
+                color:white;
+                padding:10px;
+                border-top:double 5px rgb(23, 32, 59);
+                border-bottom:double 5px rgb(23, 32, 59);
+}
+.contents a:hover{
+    animation:tocolor 0.3s forwards;
+    float:left;
+}
+.contents a{
+    font-size:clamp(0.9rem, 1vw, 2rem);
+}
+.contentlinks a{
+    text-decoration:none;
+    font-family: "Default";
+    color:aliceblue;
+    padding:10px;
+}
+.contentlinks{
+    align-items:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    font-size:25px;
+}
+.topbutton{
+            float:left;
+            background-color:rgba(0, 0, 139,0.5);
+            position:fixed;
+            top:0px;
+            right:0%;
+            font-family:Titles;
+            padding:7px 15px 7px 15px;
+            font-size:15px;
+}
+.topbutton a{
+            text-decoration:none;
+            color:white;
         }
