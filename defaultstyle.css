@@ -82,6 +82,7 @@ body{
     .contentlinks{
         flex-direction:column;
     }
+    
 
 }
 @media (max-width:900px){
@@ -91,8 +92,8 @@ body{
             padding:7px 15px 7px 15px !important;
             top:0%!important;
             margin-left:0px !important;
-            font-size:15px!important;
-}
+            font-size:15px;
+    }
 }
 .nav a:hover{
     animation:tocolor 0.8s forwards;
@@ -198,3 +199,13 @@ q::after{
             text-decoration:none;
             color:white;
         }
+img{
+    max-width: 70%;
+}
+.demons{
+    background-image: url('res/demons_transparent_vertical.png');
+    background-position-x:right;
+    background-position-y:top;
+    background-repeat: no-repeat;
+    background-size:50%;
+}
